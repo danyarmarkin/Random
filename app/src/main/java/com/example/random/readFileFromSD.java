@@ -20,7 +20,7 @@ public class readFileFromSD{
                 System.out.println("SD карта не доступна");
                 ioe = true;
                 return;
-            }
+            }//uyt
             // получаем путь к SD
             File sdPath = Environment.getExternalStorageDirectory();
             // добавляем свой каталог к пути
