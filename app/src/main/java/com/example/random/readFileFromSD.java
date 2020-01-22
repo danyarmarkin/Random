@@ -10,7 +10,7 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class readFileFromSD{
-    public static String file;
+    public static String file; // 1test github
     public static boolean initRead = false, ioe = false;
 
         public static void readFileSD() {
