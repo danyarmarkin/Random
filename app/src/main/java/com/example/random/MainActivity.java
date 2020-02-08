@@ -368,42 +368,43 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
-    public static void SetSD(){
-        defaultClass.setVisibility(View.INVISIBLE);
-        firstGroup.setVisibility(View.INVISIBLE);
-        secondGroup.setVisibility(View.INVISIBLE);
-        custom1.setVisibility(View.INVISIBLE);
-        custom2.setVisibility(View.INVISIBLE);
-        custom3.setVisibility(View.INVISIBLE);
+//    public static void SetSD(){
+//        defaultClass.setVisibility(View.INVISIBLE);
+//        firstGroup.setVisibility(View.INVISIBLE);
+//        secondGroup.setVisibility(View.INVISIBLE);
+//        custom1.setVisibility(View.INVISIBLE);
+//        custom2.setVisibility(View.INVISIBLE);
+//        custom3.setVisibility(View.INVISIBLE);
+//
+//        readFileFromSD.initRead = true;
+//
+//        for(int i=1; i<=5; i++){
+//            readFileFromSD.ioe = false;
+//            readFileFromSD.file = "class" + Integer.toString(i);
+//            readFileFromSD.readFileSD();
+//            if(readFileFromSD.ioe == false){
+//                switch (i){
+//                    case 1:
+//                        defaultClass.setVisibility(View.VISIBLE);
+//                        break;
+//                    case 2:
+//                        firstGroup.setVisibility(View.VISIBLE);
+//                        break;
+//                    case 3:
+//                        secondGroup.setVisibility(View.VISIBLE);
+//                        break;
+//                    case 4:
+//                        custom1.setVisibility(View.VISIBLE);
+//                        break;
+//                    case 5:
+//                        custom2.setVisibility(View.VISIBLE);
+//                        break;
+//                    case 6:
+//                        custom3.setVisibility(View.VISIBLE);
+//                        break;
+//                }
+//            }
+//        }
+//    }
 
-        readFileFromSD.initRead = true;
-
-        for(int i=1; i<=5; i++){
-            readFileFromSD.ioe = false;
-            readFileFromSD.file = "class" + Integer.toString(i);
-            readFileFromSD.readFileSD();
-            if(readFileFromSD.ioe == false){
-                switch (i){
-                    case 1:
-                        defaultClass.setVisibility(View.VISIBLE);
-                        break;
-                    case 2:
-                        firstGroup.setVisibility(View.VISIBLE);
-                        break;
-                    case 3:
-                        secondGroup.setVisibility(View.VISIBLE);
-                        break;
-                    case 4:
-                        custom1.setVisibility(View.VISIBLE);
-                        break;
-                    case 5:
-                        custom2.setVisibility(View.VISIBLE);
-                        break;
-                    case 6:
-                        custom3.setVisibility(View.VISIBLE);
-                        break;
-                }
-            }
-        }
-    }
 }

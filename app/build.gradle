@@ -30,4 +30,5 @@ dependencies {
     implementation files('C:/Users/danila.iarmarkin/AndroidStudioProjects/Random/lib/jsoup-1.12.1.jar')
 
     implementation files('libs/jsoup-1.12.1.jar')
+    implementation 'androidx.cardview:cardview:1.0.0'
 }
