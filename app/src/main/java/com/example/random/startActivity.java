@@ -10,13 +10,19 @@ import android.widget.TextView;
 
 public class startActivity extends Activity {
 
-    private static int time = 2500;
+    private static int time = 2500,p;
+    public static TextView tv;
+    public static ProgressBar pb;
+    public static String t;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.start);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
+        tv = findViewById(R.id.numbers);
+        pb = findViewById(R.id.progressBar);
 
         MyThread myThread = new MyThread();
         new Handler().postDelayed(new Runnable() {
@@ -30,6 +36,7 @@ public class startActivity extends Activity {
     }
 
     public class MyThread extends Thread {
+
         // Конструктор
         MyThread() {
             // Создаём новый поток
@@ -38,19 +45,22 @@ public class startActivity extends Activity {
         }
 
         public void run() {
-            ProgressBar pb = (ProgressBar)findViewById(R.id.progressBar);
-            TextView tv = (TextView)findViewById(R.id.numbers);
             try {
                 for (int i = 100; i > 0; i--) {
-                    long n;
-                    n = (long)(100000000+(Math.random()*999999999));
-                    tv.setText(Long.toString(n));
-                    pb.setProgress(100-i);
+                    int n = (int) (100000+(Math.random()*999999));
+                    t = Integer.toString(n);
+                    p = 100-i;
+                    setText();
                     Thread.sleep(time/100);
                 }
 
             } catch (InterruptedException e) {
             }
         }
+    }
+
+    public static void setText(){
+        tv.setText(t);
+        pb.setProgress(p);
     }
 }
