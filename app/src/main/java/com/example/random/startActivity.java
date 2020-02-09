@@ -11,8 +11,8 @@ import android.widget.TextView;
 public class startActivity extends Activity {
 
     private static int time = 2500,p;
-    public static TextView tv;
-    public static ProgressBar pb;
+    public  TextView tv;
+    public  ProgressBar pb;
     public static String t;
 
     @Override
@@ -32,7 +32,7 @@ public class startActivity extends Activity {
                 startActivity.this.startActivity(mainIntent);
                 startActivity.this.finish();
             }
-        }, time);
+        }, time+300);
     }
 
     public class MyThread extends Thread {
@@ -53,14 +53,27 @@ public class startActivity extends Activity {
                     setText();
                     Thread.sleep(time/100);
                 }
+                p=100;
+                t="239 8-4";
+                setText();
+                Thread.sleep(300);
 
             } catch (InterruptedException e) {
             }
         }
     }
 
-    public static void setText(){
-        tv.setText(t);
-        pb.setProgress(p);
+    public void setText(){
+        runOnUiThread(new Runnable() {
+
+            @Override
+            public void run() {
+
+                tv.setText(t);
+                pb.setProgress(p);
+
+            }
+        });
+
     }
 }
